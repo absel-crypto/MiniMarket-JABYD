@@ -1,0 +1,41 @@
+const db = require("../models/product");
+
+// Obtener productos
+exports.getProducts = (req, res) => {
+  db.all("SELECT * FROM products", [], (err, rows) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(rows);
+  });
+};
+
+// Agregar producto
+exports.addProduct = (req, res) => {
+  const { name, price, stock } = req.body;
+  db.run("INSERT INTO products (name, price, stock) VALUES (?, ?, ?)",
+    [name, price, stock],
+    function (err) {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json({ id: this.lastID, name, price, stock });
+    });
+};
+
+// Actualizar producto
+exports.updateProduct = (req, res) => {
+  const { id } = req.params;
+  const { name, price, stock } = req.body;
+  db.run("UPDATE products SET name=?, price=?, stock=? WHERE id=?",
+    [name, price, stock, id],
+    function (err) {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json({ updatedID: id });
+    });
+};
+
+// Eliminar producto
+exports.deleteProduct = (req, res) => {
+  const { id } = req.params;
+  db.run("DELETE FROM products WHERE id=?", id, function (err) {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json({ deletedID: id });
+  });
+};
