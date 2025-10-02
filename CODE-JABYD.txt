@@ -1,27 +1,20 @@
 jabyd-minimarket/
 ├── backend/
-│   ├── controllers/
-│   │   └── productsController.js
-│   ├── models/
-│   │   └── product.js
-│   ├── routes/
-│   │   └── products.js
-│   ├── database.sqlite
 │   ├── app.js
+│   ├── database.sqlite
+│   ├── controllers/productsController.js
+│   ├── models/product.js
+│   ├── routes/products.js
 │   ├── package.json
-│   └── README.md
+│   └── .gitignore
 ├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ProductList.js
-│   │   │   ├── ProductForm.js
-│   │   │   └── Navbar.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── styles.css
+│   ├── public/index.html
+│   ├── src/App.js
+│   ├── src/index.js
+│   ├── src/styles.css
+│   ├── src/components/Navbar.js
+│   ├── src/components/ProductList.js
+│   ├── src/components/ProductForm.js
 │   ├── package.json
-│   └── README.md
-├── README.md
-└── .gitignore
+│   └── .gitignore
+└── README.md
