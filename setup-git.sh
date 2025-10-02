@@ -48,7 +48,3 @@ git merge feature/login
 git merge feature/inventario
 git merge feature/api
 git push origin main
-
-# ================================
-# ✅ Proyecto versionado en GitHub con flujo profesional
-# ================================
