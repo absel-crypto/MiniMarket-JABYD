@@ -1,32 +1,31 @@
 jabyd-minimarket/
 │
-├── backend/                   # Servidor con Node.js + Express + SQLite
-│   ├── controllers/           # Lógica de negocio
+├── backend/                   
+│   ├── controllers/
 │   │   └── productsController.js
-│   ├── models/                # Definición de modelos / conexión DB
+│   ├── models/
 │   │   └── product.js
-│   ├── routes/                # Endpoints API REST
+│   ├── routes/
 │   │   └── products.js
-│   ├── app.js                 # Configuración del servidor
-│   ├── database.sqlite        # Base de datos SQLite
-│   ├── package.json           # Dependencias backend
-│   ├── .gitignore             # Ignorar archivos sensibles
-│   └── README.md              # Documentación backend
+│   ├── app.js
+│   ├── package.json
+│   ├── .gitignore
+│   └── README.md
 │
-├── frontend/                  # Cliente web con React
-│   ├── public/                # Archivos estáticos
+├── frontend/                  
+│   ├── public/
 │   │   └── index.html
-│   ├── src/                   # Código fuente React
-│   │   ├── components/        # Componentes UI
+│   ├── src/
+│   │   ├── components/
 │   │   │   ├── Navbar.js
 │   │   │   ├── ProductList.js
 │   │   │   └── ProductForm.js
-│   │   ├── App.js             # Punto central de la app
-│   │   ├── index.js           # Entrada principal React
-│   │   └── styles.css         # Estilos globales
-│   ├── package.json           # Dependencias frontend
-│   ├── .gitignore             # Ignorar archivos sensibles
-│   └── README.md              # Documentación frontend
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── styles.css
+│   ├── package.json
+│   ├── .gitignore
+│   └── README.md
 │
-├── README.md                  # Documentación general del proyecto
-└── .gitignore                 # Ignorar logs, node_modules, etc.
+├── README.md                  # Documentación general
+└── .gitignore                 # Ignorar cosas globales
